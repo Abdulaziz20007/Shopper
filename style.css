@@ -10,7 +10,7 @@ body {
   font-family: "Montserrat";
   transition: 0.5s;
 }
-body header nav .overlay {
+body .dropdown {
   display: none;
 }
 body header nav .span {
@@ -25,33 +25,33 @@ body header nav h1 {
 body header nav h1 span {
   color: #10B981;
 }
-body header nav .adiv #border {
+body header nav .bdiv #border {
   border: 2px solid rgba(0, 128, 0, 0.096);
   border-radius: 5px;
   padding: 3px;
   transition: 0.5s;
 }
-body header nav .adiv #border:hover {
+body header nav .bdiv #border:hover {
   border: 2px solid rgba(0, 128, 0, 0.404);
 }
-body header nav .adiv input {
+body header nav .bdiv input {
   font-size: 22px;
   outline: none;
   font-family: "Montserrat";
 }
-body header nav .adiv input::-moz-placeholder {
+body header nav .bdiv input::-moz-placeholder {
   font-size: 18px;
   opacity: 0.5;
 }
-body header nav .adiv input:-ms-input-placeholder {
+body header nav .bdiv input:-ms-input-placeholder {
   font-size: 18px;
   opacity: 0.5;
 }
-body header nav .adiv input::placeholder {
+body header nav .bdiv input::placeholder {
   font-size: 18px;
   opacity: 0.5;
 }
-body header nav .adiv button {
+body header nav .bdiv button {
   background: #10B981;
   height: 38px;
   width: 38px;
@@ -60,15 +60,15 @@ body header nav .adiv button {
   transition: 0.5s;
   border: 2px solid #10B981;
 }
-body header nav .adiv button:hover {
+body header nav .bdiv button:hover {
   background: transparent;
   color: black;
 }
-body header nav .adiv svg {
+body header nav .bdiv svg {
   height: 18px;
   width: 18px;
 }
-body header nav .adiv .adiv {
+body header nav .bdiv .adiv {
   border: 1px solid #10B981;
   border-radius: 50px;
   padding: 0.7rem;
@@ -78,7 +78,23 @@ body header nav .adiv .adiv {
   align-items: center;
   transition: 0.6s;
 }
-body header nav .adiv .adiv h1 {
+body header nav .bdiv .adiv h1 {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0;
+}
+body header nav .bdiv .cdiv {
+  border: 1px solid #10B981;
+  border-radius: 50px;
+  padding: 0.7rem;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  transition: 0.6s;
+}
+body header nav .bdiv .cdiv h1 {
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
@@ -561,52 +577,47 @@ body footer .links svg:hover {
   .span {
     display: block !important;
   }
-  .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow-x: hidden;
+  .dropdown {
+    display: block !important;
+  }
+  .drop {
+    padding: 0 !important;
+  }
+  .drop div {
+    padding: 3px;
+  }
+  .drop button {
+    height: 38px;
+    width: 38px;
+    border-radius: 5px;
+    background-color: #10B981;
+    border: 2px solid #10B981;
     transition: 0.5s;
-    display: block !important;
   }
-  .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    display: block !important;
+  .drop button:hover {
+    background-color: transparent;
   }
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+  .drop input {
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
   }
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+  .cdiv {
+    border: 1px solid #10B981;
+    border-radius: 50px;
+    padding: 0.7rem;
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    transition: 0.6s;
   }
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+  .cdiv h1 {
+    display: none;
   }
-}
-@media screen and (max-width: 800px) and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px;
-  }
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+  .dropdown-toggle {
+    width: 60px !important;
+    height: 40px !important;
   }
 }/*# sourceMappingURL=style.css.map */
